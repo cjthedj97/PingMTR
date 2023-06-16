@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Setup BATS
+        uses: mig4/setup-bats@v1
+        with:
+          bats-version: 1.2.1
 
-      - name: Install Bats
-        uses: bats-core/bats-action@v3
+      - name: Check out code
+        uses: actions/checkout@v1
 
       - name: Run Bats tests
         run: bats pingmtr_test.bats
