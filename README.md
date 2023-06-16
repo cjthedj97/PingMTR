@@ -6,7 +6,7 @@ The PingMTR.sh script is a bash script that performs continuous monitoring of an
 
 To use the script, you can provide command-line arguments or let the script prompt you for the necessary information.
 
-```bash
+```
 Usage: ./PingMTR.sh [-m mode] [-ip ip_address]
 
 Options:
