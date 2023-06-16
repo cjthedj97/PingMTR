@@ -77,7 +77,7 @@ perform_mtr() {
 
 # Infinite loop for continuous monitoring
 while true; do
-    if ping -c 1 192.168.1.1 >/dev/null 2>&1; then
+    if ping -c 1 "${ip_address}" >/dev/null 2>&1; then
         echo -e "Ping was successful Waiting "
         for i in `seq 60 -1 1` ; do echo -ne "\r Ping was successful: Waiting $i " ; sleep 1 ; done
     else
