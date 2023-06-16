@@ -17,10 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Bats
-        run: |
-          git clone https://github.com/bats-core/bats-core.git
-          cd bats-core
-          sudo ./install.sh ../bats
+        uses: bats-core/bats-action@v3
 
       - name: Run Bats tests
         run: bats pingmtr_test.bats
