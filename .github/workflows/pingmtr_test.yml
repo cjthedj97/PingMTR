@@ -20,7 +20,7 @@ jobs:
         run: |
           git clone https://github.com/bats-core/bats-core.git
           cd bats-core
-          ./install.sh /usr/local
+          sudo ./install.sh ../bats
 
       - name: Run Bats tests
-        run: pingmtr_test.bats
+        run: bats pingmtr_test.bats
